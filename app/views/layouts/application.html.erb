@@ -7,23 +7,21 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-    <header>
       <nav>
         <% if user_signed_in? == false %>
         <h4>Please sign up to get full access to the site</h4>
-        <%= link_to("Sign In", new_user_session_path, :method => :get, :class => "button") %>
+        <%= link_to("Log In", new_user_session_path, :method => :get, :class => "button") %>
         <%= link_to("Sign Up", new_user_registration_path, :method => :get, :class => "button") %>
         <% else  %>
-        <h4>Hi <%= current_user.email %> you are logged into Gemstone</h4> 
+        <h4>You are logged into Gemstone</h4> 
         <%= link_to("Log Out", destroy_user_session_path, :method => :delete, :class => "button")  %>
           <% if current_page?(user_path(@user)) %>
           <%=   link_to("Homepage", root_path, :class => "button") %>
           <% else  %>
-          <%=   link_to("Account Details", user_path(@user), :class => "button") %>
+          <%=   link_to("Account", user_path(@user), :class => "button") %>
           <% end %>
         <% end %>
       </nav>
-    </header>  
   <body>
     <%= yield %>
   </body>

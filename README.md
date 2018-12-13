@@ -1,8 +1,10 @@
 # Gemstone
 
-## Ruby Version
+## Software
 
-Gemstone uses ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin17]
+Gemstone uses 
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin17]
+Rails 5.2.1
 
 * Configuration
 
@@ -15,5 +17,3 @@ Gemstone uses ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin17]
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
